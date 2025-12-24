@@ -31,25 +31,18 @@
     >
     </iframe>
 
-    <script>
-      // Lấy video ID từ query string (?id=...)
-      const params = new URLSearchParams(window.location.search);
-      const videoId = params.get("id");
+<script>
+    // Lấy video ID từ query string (?id=...)
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get('id');
 
-      if (videoId) {
-        const iframe = document.getElementById("player");
-        iframe.src =
-          `https://www.youtube-nocookie.com/embed/${videoId}?` +
-          `autoplay=1` +
-          `&modestbranding=1` +
-          `&rel=0` +
-          `&iv_load_policy=3` +
-          `&controls=1` +
-          `&fs=1`;
-      } else {
-        document.body.innerHTML =
-          '<h1 style="color:white; text-align:center; padding-top:20%;">Không tìm thấy video ID</h1>';
-      }
-    </script>
+    if (videoId) {
+        const iframe = document.getElementById('player');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3&controls=1&fs=1`;
+    } else {
+        document.body.innerHTML += '<h1 style="color:white; text-align:center; margin-top:20%;">Không tìm thấy video ID</h1>';
+    }
+</script>
   </body>
 </html>
+
